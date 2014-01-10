@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+var REST = require('..');
+var program = require('commander');
+
+program
+  .version('0.0.1');
+
+program.command('start')
+  .description('requesting information')
+  .option('-p, --listenPort [port]', 'listen on port [port]')
+  .option('-s, --ssl', 'use SSL')
+  .option('-key, --sslKey [sslKey file]', 'use [sslKey file]')
+  .option('-cert, --sslCert [sslCert file]', 'use [sslCert file]')
+  .action(function(options) {
+  	rest = new REST({
+      listenPort: options.listenPort || 443,
+      ssl: options.ssl || false,
+      sslKeyFile: options.sslKey,
+      sslCertificateFile: options.sslCert
+    });
+    rest.promise.then(function (rest) { rest.start() });
+  });
+
+program.parse(process.argv);

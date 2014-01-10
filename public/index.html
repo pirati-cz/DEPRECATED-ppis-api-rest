@@ -1,1 +1,29 @@
-<!DOCTYPE html><html><head><title>API</title></head><body><h1>API</h1><p>To list users use <code>https://example.com/users</code></p><p>To list groups use <code>https://example.com/groups</code></p><p>You can search for users and/or groups by using these urls:<ul><li><code>https://example.com/user/USERNAME</code></li><li><code>https://example.com/group/NAME</code></li></ul></p><p>User-group relations can be gathered like this:<ul><li><code>https://example.com/user/USERNAME/groups</code></li><li><code>https://example.com/group/NAME/members</code></li></ul></p></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API</title>
+</head>
+<body>
+	<h1>API</h1>
+	<p>To list users use <code>https://example.com/users</code></p>
+	<p>To list groups use <code>https://example.com/groups</code></p>
+	<p>To list permissions use <code>https://example.com/permissions</code></p>
+	<p>You can search for users, groups and/or permissions by using these urls:
+		<ul>
+			<li><code>https://example.com/user/USERNAME</code></li>
+			<li><code>https://example.com/group/NAME</code></li>
+			<li><code>https://example.com/permission/NAME</code></li>
+		</ul>
+	</p>
+	<p>Relations can be gathered like this:
+		<ul>
+			<li><code>https://example.com/user/USERNAME/groups</code></li>
+			<li><code>https://example.com/user/USERNAME/permissions</code></li>
+			<li><code>https://example.com/group/NAME/members</code></li>
+			<li><code>https://example.com/group/NAME/permissions</code></li>
+			<li><code>https://example.com/permission/NAME/groups</code></li>
+			<li><code>https://example.com/permission/NAME/users</code></li>
+		</ul>
+	</p>
+</body>
+</html>
